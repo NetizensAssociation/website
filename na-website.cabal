@@ -2,11 +2,11 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 024217852f866f3b18096ecd5e427bc823419c097904f459e2e0fceceedbcd67
+-- hash: f0124384f904f51a8c4c105edb54e74d573528440c36f2673a824474892577e3
 
 name:           na-website
 version:        0.0.0
-author:         Netizens Association
+author:         Netizens' Association
 maintainer:     Julian Arni <jkarni@gmail.com>
 license:        BSD3
 build-type:     Simple
@@ -18,7 +18,9 @@ source-repository head
 
 library
   exposed-modules:
+      NA
       NA.API
+      NA.Handler
       NA.Types
   other-modules:
       Paths_na_website
@@ -29,12 +31,16 @@ library
   build-depends:
       aeson
     , base >=4 && <5
+    , directory
     , lens
     , network-uri
     , servant
     , servant-server
     , servant-yaml
+    , simple-logger
     , text
+    , warp
+    , yaml
   default-language: Haskell2010
 
 executable na-server
@@ -46,6 +52,7 @@ executable na-server
   build-depends:
       aeson
     , base >=4 && <5
+    , directory
     , lens
     , na-website
     , network-uri
@@ -53,7 +60,10 @@ executable na-server
     , servant
     , servant-server
     , servant-yaml
+    , simple-logger
     , text
+    , warp
+    , yaml
   default-language: Haskell2010
 
 test-suite spec
@@ -71,6 +81,7 @@ test-suite spec
       QuickCheck
     , aeson
     , base >=4 && <5
+    , directory
     , hspec
     , lens
     , na-website
@@ -79,5 +90,8 @@ test-suite spec
     , servant-aeson-specs
     , servant-server
     , servant-yaml
+    , simple-logger
     , text
+    , warp
+    , yaml
   default-language: Haskell2010

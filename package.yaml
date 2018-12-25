@@ -1,6 +1,6 @@
 name: na-website
 version: '0.0.0'
-author: Netizens Association
+author: Netizens' Association
 maintainer: Julian Arni <jkarni@gmail.com>
 license: BSD3
 git: NetizensAssociation/website
@@ -8,12 +8,16 @@ git: NetizensAssociation/website
 dependencies:
 - base >=4 && <5
 - aeson
+- directory
 - lens
 - network-uri
 - servant
 - servant-yaml
 - servant-server
+- simple-logger
 - text
+- yaml
+- warp
 
 
 ghc-options:

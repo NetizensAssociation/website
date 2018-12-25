@@ -1,4 +1,6 @@
 module Server (main) where
 
+import qualified NA
+
 main :: IO ()
-main = return ()
+main = NA.main
