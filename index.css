@@ -1,3 +1,11 @@
+:root {
+  --main-bg-color: #FCF8EE;
+  --main-color: #061722;
+  --first-complimentary-color: #0A5A77;
+  --second-complimentary-color: #965E1C;
+  --supporting-color: #81B5D1;
+}
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -79,7 +87,7 @@ label {
 
 a.pure-button-primary {
     background: white;
-    color: #1f8dd6;
+    color: var(--second-complimentary-color);
     border-radius: 5px;
     font-size: 120%;
 }
@@ -96,7 +104,7 @@ a.pure-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-    background: #2d3e50;
+    background: var(--main-color);
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -116,13 +124,13 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: var(--second-complimentary-color);
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    filter: brightness(150%);
 }
 
 
@@ -132,7 +140,7 @@ a.pure-button-primary {
  */
 
 .splash-container {
-    background: #1f8dd6;
+    background: var(--first-complimentary-color);
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -218,6 +226,11 @@ a.pure-button-primary {
 .ribbon {
     background: #2d3e50;
     color: #aaa;
+    padding: 2rem 5rem;
+}
+
+.union-list-item a:hover {
+  color: var(--second-complimentary-color);
 }
 
 /* This is the class used for the footer */
