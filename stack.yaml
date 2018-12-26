@@ -1,6 +1,0 @@
-resolver: lts-12.9
-packages:
- - '.'
-extra-deps:
-- servant-aeson-specs-0.6.2.0
-- simple-logger-0.0.4
