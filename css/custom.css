@@ -57,11 +57,9 @@ button:active{
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);
 }
 
-
-
-/***** Navigation *****/
-
-
+/****************************************
+*****************************************
+Navigation */
 
 nav{
     display: flex;
@@ -106,11 +104,11 @@ nav .active-nav{
 
 .nav-links li{
     margin: 40px 0;
-    display: block;   
+    display: block;
 }
 
 .mobile-nav-icon{
-    margin: 
+    margin:
     font-weight: regular;
     cursor: pointer;
     display: block;
@@ -123,11 +121,9 @@ nav .active-nav{
     font-weight: bold;
 }
 
-
-
-/***** Articles *****/
-
-
+/****************************************
+*****************************************
+Articles */
 
 main{
     display: flex;
@@ -135,16 +131,16 @@ main{
     margin: 0 auto;
 }
 
-article{
+.article{
     margin: 0 auto;
     padding-bottom: 250px;
 }
 
-article:last-child{
+.article:last-child{
     padding-bottom: 100px;
 }
 
-article h1{
+.article h1{
     font-size: 29px;
     text-align: center;
 }
@@ -268,7 +264,9 @@ article h1{
 }
 
 
-/***** Clearfix *****/
+/****************************************
+*****************************************
+Clearfix */
 
 
 .cf:before,
@@ -282,12 +280,14 @@ article h1{
 }
 
 
-/***** Media queries *****/
-
-
+/****************************************
+*****************************************
+Breakpoints */
 
 @media (min-width: 770px) {
-/***** Navigation *****/
+  /****************************************
+  *****************************************
+  Navigation */
     nav{
         flex-flow: row;
         padding: 1em 2em;
@@ -302,7 +302,7 @@ article h1{
         display: block;
     }
     .nav-links li{
-        display: inline;   
+        display: inline;
     }
     .nav-links a{
         display: inline-block;
@@ -315,7 +315,9 @@ article h1{
     .mobile-nav-icon{
         display: none;
     }
-/***** Content *****/
+    /****************************************
+    *****************************************
+    Content */
     .hero{
         text-align: inherit;
         flex-direction: row;
