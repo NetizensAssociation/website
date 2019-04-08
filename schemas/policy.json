@@ -1,0 +1,26 @@
+{ "$id": "https://izens.net/schemas/policy.json",
+
+  "definitions": {
+      "action": {
+          "type": "object",
+          "properties": {
+              "action": { "type": "string", "enum": ["block", "warn"] },
+              "message": { "type": "string" }
+          }
+      },
+      "rule": {
+          "type": "object",
+          "properties": {
+              "sites": { "type": "array", "items": {"type": "string"} },
+              "actions": { "type": "array", "items": { "$ref": "#/definitions/action" } }
+          }
+      }
+  },
+
+  "type": "object",
+  "properties" : {
+      "name": { "type": "string" },
+      "url": { "type": "string" },
+      "rules": { "type": "array", "items": { "$ref": "#/definitions/rule" } }
+  }
+}
