@@ -39,7 +39,7 @@ $(document).ready(function(){
   		var scrollDistance = $(window).scrollTop();
 
   		$('article').each(function(i) {
-  				if ($(this).position().top+300 <= scrollDistance) {
+  				if ($(this).position().top-250 <= scrollDistance) {
   						$('.nav-links a.active-nav').removeClass('active-nav');
   						$('.nav-links a').eq(i).addClass('active-nav');
   				}

@@ -7,15 +7,21 @@ body{
 }
 
 p, a, h1, h2, h3, h4, h5, h6, button{
-    font-family: Courier New;
+  font-weight: 200;
+  font-family: 'IBM Plex Mono';
 }
 
 button{
-    font-size: 13px;
+  font-size: 12px;
 }
 
 p{
-    font-size: 19px;
+  line-height: 1.75;
+  font-size: 17px;
+}
+
+h1, h2{
+  font-weight: 700;
 }
 
 a:hover,
@@ -27,6 +33,18 @@ a:active{
 ul{
     list-style-type: none;
     padding: 0;
+}
+
+li a{
+  font-size: 13px;
+}
+
+.campaigns ul li p{
+  font-weight: 200;
+}
+
+.campaigns ul li h4{
+  font-weight: 700;
 }
 
 button{
@@ -109,8 +127,6 @@ nav .active-nav{
 }
 
 .mobile-nav-icon{
-    margin:
-    font-weight: regular;
     cursor: pointer;
     display: block;
     float: right;
@@ -132,18 +148,13 @@ main{
     margin: 0 auto;
 }
 
-.article{
+article{
     margin: 0 auto;
-    padding-bottom: 250px;
+    /* padding-bottom: 250px; */
 }
 
-.article:last-child{
-    padding-bottom: 100px;
-}
-
-.article h1{
-    font-size: 29px;
-    text-align: center;
+article:last-child{
+    /* padding-bottom: 100px; */
 }
 
     /***** Articles > Hero *****/
