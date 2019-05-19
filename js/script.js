@@ -45,4 +45,13 @@ $(document).ready(function(){
   				}
   		});
   }).scroll();
+
 });
+
+function addPolicy(url) {
+  console.log('adding...', url)
+  window.postMessage({
+    type: 'add-campaign-policy',
+    policyFileUrl: url
+  }, "*")
+}
