@@ -1,23 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700&display=swap');
+
 *{
     box-sizing: border-box;
 }
 
 body{
-    margin: 0;
+  font-size: 16px;
+  margin: 0;
+  color: #343A40;
 }
 
-p, a, h1, h2, h3, h4, h5, h6, button{
+
+
+/****************************************
+*****************************************
+Fonts and Inputs */
+
+p, a, h1, h2, h3, h4, h5, h6, label, input, button, .logo{
   font-weight: 200;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'Courier new', Courier, monospace;
 }
 
 button{
-  font-size: 12px;
+  font-size: 0.750em;
 }
 
 p{
   line-height: 1.75;
-  font-size: 17px;
+  font-size: 1.063em;
 }
 
 h1, h2{
@@ -36,38 +46,15 @@ ul{
 }
 
 li a{
-  font-size: 13px;
-}
-
-.campaigns ul li p{
-  font-weight: 200;
-}
-
-.campaigns ul li h4{
-  font-weight: 700;
-}
-
-.campaigns li a,
-.campaigns li p,
-.campaigns li h4{
-    font-size: 15px;
-    line-height: 0.75;
-}
-
-.campaigns li a{
-    margin: 1em 0;
-}
-
-.card p{
-    font-weight: bold;
-    font-size: 23px;
+  font-size: 0.813em;
 }
 
 button{
-    padding: 15px 30px;
-    border-radius: 5px;
+    padding: 1em 1.8em;
+    border-radius: 0.313em;
     background-color: buttonface;
-    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
     border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186)
     background: rgba(239,239,239,1);
     background: -moz-linear-gradient(top, rgba(239,239,239,1) 0%, rgba(239,239,239,1) 30%, rgba(216,216,216,1) 100%);
@@ -80,6 +67,8 @@ button{
     -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1);
     box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1);
     transition: box-shadow, transform, 100ms ease;
+    outline: none;
+    cursor: pointer;
 }
 
 button:hover,
@@ -91,6 +80,9 @@ button:active{
     -moz-box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.13);
     box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.13);
 }
+
+
+
 
 /****************************************
 *****************************************
@@ -124,8 +116,8 @@ nav .active-nav{
 }
 
 .nav-logo{
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 1.438em;
+    font-weight: 700;
     text-decoration: none;
     color: #333333;
     line-height: 1.85;
@@ -154,9 +146,12 @@ nav .active-nav{
     font-weight: bold;
 }
 
+
+
+
 /****************************************
 *****************************************
-Articles */
+Main & Articles */
 
 main{
     display: flex;
@@ -164,45 +159,29 @@ main{
     margin: 0 auto;
 }
 
-article{
-    margin: 0 auto;
-    /* padding-bottom: 250px; */
-}
-
-article:last-child{
-    /* padding-bottom: 100px; */
-}
-
     /***** Articles > Hero *****/
 
 .hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto 50px;
-    padding: 25px;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  background-image: url(/images/Blob_01.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.hero .img{
-    margin: 0 auto;
-    display: block;
-    height: 400px;
-    width: 100%;
+
+.hero .cta{
+  max-width: 600px;
 }
 
-.hero .cta-jumbo{
-    display: block;
-    width: 100%;
-}
-
-.hero .cta-jumbo h2{
+.hero h2{
     margin: 25px auto 0 auto;
-    font-size: 31px;
+    font-size: 24px;
 }
 
     /***** Articles > How to *****/
@@ -238,6 +217,11 @@ article:last-child{
     box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.13);
 }
 
+.card p{
+    font-weight: bold;
+    font-size: 1.438em;
+}
+
     /***** Articles > Campaigns *****/
 
 .campaigns ul{
@@ -270,9 +254,58 @@ article:last-child{
     box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.13);
 }
 
+.campaigns ul li p{
+  font-weight: 200;
+}
+
+.campaigns ul li h4{
+  font-weight: 700;
+}
+
+.campaigns li a,
+.campaigns li p,
+.campaigns li h4{
+    font-size: 0.938em;
+    line-height: 0.75;
+}
+
+.campaigns li a{
+    margin: 1em 0;
+}
+
 .campaigns button{
     display: block;
     margin: 50px auto 0 auto;
+}
+
+
+
+/****************************************
+*****************************************
+Footer */
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 6em 0;
+  background-color: #f0f0f0;
+}
+
+footer a{
+  color: #343A40;
+  font-size: 2.5em;
+  transition: transform 100ms ease;
+}
+
+footer a:last-child {
+  margin-left: 1em;
+}
+
+footer a:hover{
+  transform: scale(1.2);
+  font-weight: normal;
 }
 
 
@@ -332,7 +365,6 @@ Breakpoints */
     Content */
     .hero{
         text-align: inherit;
-        flex-direction: row;
     }
     .hero .img{
         margin: 0 auto;
@@ -340,8 +372,8 @@ Breakpoints */
         height: 100%;
         width: auto;
     }
-    .hero .cta-jumbo h2{
-        margin: 0 auto;
+    .hero h2{
+        font-size: 31px;
     }
     .campaigns li{
         flex-direction: row;

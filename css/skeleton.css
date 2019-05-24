@@ -33,8 +33,10 @@
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  padding: 0 1.5em 200px 1.5em;
+  padding: 6em 1.5em 6em 1.5em;
   box-sizing: border-box; }
+.container:last-child {
+  padding: 6em 1.5em 10em 1.5em;}
 .column,
 .columns {
   width: 100%;
