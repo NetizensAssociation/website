@@ -16,7 +16,7 @@ body{
 *****************************************
 Fonts and Inputs */
 
-p, a, h1, h2, h3, h4, h5, h6, label, input, button, .logo{
+p, a, h1, h2, h3, h4, h5, h6, ul, label, input, button, .logo{
   font-weight: 200;
   font-family: 'IBM Plex Mono', 'Courier new', Courier, monospace;
 }
@@ -41,8 +41,10 @@ a:active{
 }
 
 ul{
-    list-style-type: none;
-    padding: 0;
+  line-height: 1.75;
+  font-weight: 700;
+  list-style-type: none;
+  padding: 0;
 }
 
 li a{
@@ -83,6 +85,64 @@ button:active{
 
 
 
+/****************************************
+*****************************************
+Notifications */
+
+
+#notification{
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  padding: 1rem;
+  bottom: 5em;
+  left: 50%;
+  margin-left: -125.492px;
+  font-size: 0.813em;
+  border-radius: 0.5em;
+  color: #1ec15b;
+  border: 1px solid #40de70;
+  background-color: #afffc7;
+  box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.16);
+  transition: opacity 300ms fadein;
+  z-index: 3;
+}
+
+#notification.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 5em; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 5em; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 5em; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 5em; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+i.fas.fa-fist-raised {
+    font-size: 1.9em;
+}
+
+#notification p {
+  font-weight: 700;
+  margin: 0 0 0 16px;
+}
+
 
 /****************************************
 *****************************************
@@ -101,7 +161,7 @@ nav{
     -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1);
     box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1);
-    z-index: 99;
+    z-index: 2;
 }
 
 nav .active-nav{
@@ -186,6 +246,17 @@ main{
     font-size: 24px;
 }
 
+/***** Articles > About *****/
+
+.about ul{
+  list-style-type: disc;
+  padding: 0 0 0 2rem;
+}
+
+.about ul li{
+  line-height: 2.5rem;
+}
+
     /***** Articles > How to *****/
 
 .how-to .row{
@@ -199,7 +270,7 @@ main{
     text-align: center;
     margin-top: 25px;
     height: 350px;
-    max-width: 250px;
+    max-width: 275px;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -298,15 +369,15 @@ footer{
 footer a{
   color: #343A40;
   font-size: 2.5em;
-  transition: transform 100ms ease;
+  transition: transform 200ms ease;
 }
 
-footer a:last-child {
+/* footer a:last-child {
   margin-left: 1em;
-}
+} */
 
 footer a:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
   font-weight: normal;
 }
 
@@ -356,7 +427,7 @@ Breakpoints */
         text-align: left;
         margin: 0 0 0 15px;
     }
-    .nav-links li:nth-child(4){
+    .nav-links li:nth-child(3){
         margin: 0 25px 0 0;
     }
     .mobile-nav-icon{

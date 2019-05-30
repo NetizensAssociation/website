@@ -55,3 +55,11 @@ function addPolicy(url) {
     policyFileUrl: url
   }, "*")
 }
+
+function addPolicy() {
+  var animateIn = document.getElementById("notification");
+  animateIn.className = "show";
+  setTimeout(function(){
+    animateIn.className = animateIn.className.replace("show", "");
+  }, 3000);
+}
