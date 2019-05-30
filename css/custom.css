@@ -167,11 +167,13 @@ main{
   justify-content: flex-end;
   height: 100vh;
   width: 100%;
-  padding: 25px;
+  padding: 2em;
   text-align: center;
   background-image: url(/images/Blob_01.png);
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-background-size: 50em;
+  background-size: 50em;
 }
 
 
