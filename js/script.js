@@ -55,3 +55,11 @@ function addPolicy(url) {
     policyFileUrl: url
   }, "*")
 }
+
+function linkToExtension() {
+  if(navigator.userAgent.indexOf("Firefox") != -1 ) {
+    window.open('https://addons.mozilla.org/firefox/addon/picket/', '_blank')
+  } else {
+    window.open('https://chrome.google.com/webstore/detail/poeghfopkomankboimkibohhaomlafpd', '_blank')
+  }
+}
