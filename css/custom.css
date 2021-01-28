@@ -381,6 +381,9 @@ footer a:hover{
   font-weight: normal;
 }
 
+footer ul, li{
+  display: inline;
+}
 
 /****************************************
 *****************************************
